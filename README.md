@@ -1,6 +1,6 @@
 # shop_app
 
-A new Flutter project.
+This shop_app is a Flutter demo project to show the skill and knowledge in using Flutter to create mobile and web application.
 
 ## Getting Started
 
