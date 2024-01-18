@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "94175353153",
+    "firebase_url": "https://shop-app-learning-8f9ce-default-rtdb.firebaseio.com",
+    "project_id": "shop-app-learning-8f9ce",
+    "storage_bucket": "shop-app-learning-8f9ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:94175353153:android:be1055d23556b63f82a9c0",
+        "android_client_info": {
+          "package_name": "com.example.shop_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjC9ODHlxSC5dYiGLJH873DUl1jfsgsY4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
