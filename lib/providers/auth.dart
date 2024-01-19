@@ -2,14 +2,15 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/http_exception.dart';
 
 class Auth with ChangeNotifier {
-  final API_Key = 'AIzaSyBf8gcMSkwleFJk6gXqL5Q9zenXIkMudu0';
-  final _googleAPIHostname = 'identitytoolkit.googleapis.com';
+  final API_Key = dotenv.env['API_KEY'];
+  final _googleAPIHostname = dotenv.env['FIREBASE_AUTH_URL'];
   String _token = '';
   DateTime _expiryDate = DateTime.now();
   String _userId = '';

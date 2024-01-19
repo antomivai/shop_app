@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 
 import '../providers/auth.dart';
@@ -21,6 +22,8 @@ class OrderItem {
 }
 
 class Orders with ChangeNotifier {
+  final _firebaseDBHostname = dotenv.env['FIREBASE_REALTIME_DB_URL'];
+
   late Auth _authenticationData;
   List<OrderItem> _orders = [];
 
@@ -34,8 +37,6 @@ class Orders with ChangeNotifier {
   }
 
   Future<void> loadOrders() async {
-    final _firebaseDBHostname =
-        'shop-app-learning-8f9ce-default-rtdb.firebaseio.com';
     final url = Uri(
         scheme: 'https',
         host: _firebaseDBHostname,
@@ -79,8 +80,6 @@ class Orders with ChangeNotifier {
   }
 
   Future<void> addOrder(List<CartItem> cartItems, double total) async {
-    final _firebaseDBHostname =
-        'shop-app-learning-8f9ce-default-rtdb.firebaseio.com';
     final url = Uri(
         scheme: 'https',
         host: _firebaseDBHostname,

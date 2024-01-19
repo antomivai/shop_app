@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 
 import '../models/http_exception.dart';
@@ -22,8 +23,8 @@ class Product with ChangeNotifier {
       this.isFavorite = false});
 
   Future<void> toggleFavoriteStatus(String token, String userId) async {
-    final _firebaseDBHostname =
-        'shop-app-learning-8f9ce-default-rtdb.firebaseio.com';
+    final _firebaseDBHostname = dotenv.env['FIREBASE_REALTIME_DB_URL'];
+
     final url = Uri(
         scheme: 'https',
         host: _firebaseDBHostname,

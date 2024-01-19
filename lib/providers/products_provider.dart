@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 
 import 'auth.dart';
@@ -9,8 +10,7 @@ import '../models/http_exception.dart';
 
 class ProductsProvider with ChangeNotifier {
   //TODO: Externalize configuration to firebaseDBHostname
-  String _firebaseDBHostname =
-      'shop-app-learning-8f9ce-default-rtdb.firebaseio.com';
+  String _firebaseDBHostname = dotenv.env['FIREBASE_REALTIME_DB_URL'];
 
   late Auth _authenticationData;
 
