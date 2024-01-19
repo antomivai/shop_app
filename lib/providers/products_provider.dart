@@ -10,7 +10,7 @@ import '../models/http_exception.dart';
 
 class ProductsProvider with ChangeNotifier {
   //TODO: Externalize configuration to firebaseDBHostname
-  String _firebaseDBHostname = dotenv.env['FIREBASE_REALTIME_DB_URL'];
+  String? _firebaseDBHostname = dotenv.env['FIREBASE_REALTIME_DB_URL'];
 
   late Auth _authenticationData;
 
